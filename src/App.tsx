@@ -1,11 +1,21 @@
 import AppHeader from "./components/header/Header"
-import HomeBanner from "./components/home-banner/HomeBanner"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./pages/home/Home"
+import WatchMovie from "./pages/watch-movie/WatchMovie"
 
+// dynamic route
 const App = () => {
   return (
     <div>
-      <AppHeader />
-      <HomeBanner />
+      <BrowserRouter basename="/movie28/" >
+        <AppHeader />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/watch/:id" element={<WatchMovie />} />
+          <Route path="/*" element={<h1>404 - Page Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
+      {/* <Footer /> */}
     </div>
   )
 }

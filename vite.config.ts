@@ -6,3 +6,10 @@ export default defineConfig({
   plugins: [react()],
   base: "/movie28/"
 })
+
+
+// lucide-react
+// react-router-dom
+// ant-design
+// @ant-design/icons
+// gh-pages 

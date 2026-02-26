@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Menu, Button, Space, Avatar, Typography } from 'antd';
 import { UserOutlined, MenuOutlined } from '@ant-design/icons';
+import {Link, NavLink} from "react-router-dom";
 
 const { Header } = Layout;
 const { Text } = Typography;
@@ -8,10 +9,10 @@ const { Text } = Typography;
 const AppHeader = () => {
   // Меню элементтери
   const menuItems = [
-    { key: '1', label: 'Башкы бет' },
-    { key: '2', label: 'Кызматтар' },
-    { key: '3', label: 'Биз жөнүндө' },
-    { key: '4', label: 'Байланыш' },
+    { key: '1', label: <NavLink to="/">Башкы бет</NavLink> },
+    { key: '2', label: <NavLink to="/services">Кызматтар</NavLink>},
+    { key: '3', label: <NavLink to="/about">Биз жөнүндө</NavLink> },
+    { key: '4', label: <NavLink to="/contact">Байланыш</NavLink> },
   ];
 
   return (
@@ -35,7 +36,7 @@ const AppHeader = () => {
       <Menu
         mode="horizontal"
         defaultSelectedKeys={['1']}
-        items={menuItems}
+        items={ menuItems }
         style={{ flex: 1, minWidth: 0, justifyContent: 'center', borderBottom: 'none' }}
       />
 

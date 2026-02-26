@@ -23,7 +23,7 @@ const HomeBanner = () => {
         </div>
 
         {/* Аталышы */}
-        <Title className="banner-title">SAVE ME</Title>
+        <Title type="success" >SAVE ME</Title>
 
         {/* Сүрөттөмө */}
         <Paragraph className="banner-desc">
